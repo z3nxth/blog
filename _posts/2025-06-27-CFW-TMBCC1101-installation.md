@@ -7,11 +7,13 @@ tags:
   - hardware
   - tools
 ---
+The Lilygo T-Embed CC1101 is a **pocket-sized dev board with in-built Sub-GHz, IR, NFC, WiFi, BLE, BadUSB and more.** It uses an **ESP-32 S3** for the microcontroller. I've made this blog as I've noticed as the community is still small, and more tutorials always need to be made.
+
 ## Introduction
 
 _⚠️ Disclaimer: Don't be a skid, use everything legally and responsibly :)_
-
 The Lilygo T-Embed CC1101 is a **pocket-sized dev board with in-built Sub-GHz, IR, NFC, WiFi, BLE, BadUSB and more.** It uses an **ESP-32 S3** for the microcontroller. I've made this blog as I've noticed as the community is still small, and more tutorials always need to be made.
+
 
 Using custom firmware (ie. [Bruce](https://bruce.computer/)) takes these capabilities to the next level, truly allowing them to become the cheaper "swiss army knife" alternative to the Flipper Zero.
 ## Hardware and Specifications
