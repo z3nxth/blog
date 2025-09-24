@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | Iftekhar Syed</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/maple-mono@latest/index.css">
+    <style>
+        @import url('-apple-system-font');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #000000;
+            --secondary: #1a1a1a;
+            --accent: #ffffff;
+            --text: #f5f5f5;
+            --text-secondary: #b0b0b0;
+            --success: #ffffff;
+            --warning: #888888;
+            --error: #ff4444;
+            --card-bg: rgba(26, 26, 26, 0.8);
+            --border: rgba(255, 255, 255, 0.15);
+        }
+
+        body {
+            font-family: 'Maple Mono', 'SF Mono', 'Monaco', 'Inconsolata', monospace;
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+            color: var(--text);
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Professional background effect */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 40% 20%, rgba(255, 255, 255, 0.02) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 0;
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.8);
+            border-bottom: 1px solid var(--border);
+        }
+
+        nav .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--accent);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo::before {
+            content: '>';
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+
+        /* 404 Content */
+        .error-content {
+            animation: fadeInUp 1s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .error-code {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', system-ui, sans-serif;
+            font-size: 8rem;
+            font-weight: 900;
+            color: var(--accent);
+            margin-bottom: 20px;
+            letter-spacing: -0.05em;
+            text-shadow: 0 0 50px rgba(255, 255, 255, 0.3);
+            background: linear-gradient(45deg, #ffffff, #cccccc);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .error-title {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', system-ui, sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+            color: var(--accent);
+            letter-spacing: -0.02em;
+        }
+
+        .error-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            letter-spacing: 1px;
+        }
+
+        .terminal {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 30px;
+            margin: 40px auto;
+            max-width: 600px;
+            text-align: left;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 20px 60px rgba(255, 255, 255, 0.1);
+        }
+
+        .terminal-header {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .terminal-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .terminal-dot.red { background: #888888; }
+        .terminal-dot.yellow { background: #aaaaaa; }
+        .terminal-dot.green { background: #ffffff; }
+
+        .terminal-content {
+            font-family: monospace;
+            color: var(--success);
+            line-height: 1.8;
+            font-size: 1rem;
+        }
+
+        .error-line {
+            color: var(--error);
+            margin-bottom: 10px;
+        }
+
+        .command-line {
+            color: var(--accent);
+            margin: 15px 0;
+        }
+
+        .typing {
+            overflow: hidden;
+            white-space: nowrap;
+            animation: typing 2s steps(30, end);
+            border-right: 2px solid var(--accent);
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        .cursor {
+            animation: blink 1s infinite;
+        }
+
+        .actions {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            background: var(--card-bg);
+            border: 2px solid var(--accent);
+            color: var(--accent);
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            backdrop-filter: blur(10px);
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn:hover {
+            background: var(--accent);
+            color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-secondary {
+            border-color: var(--text-secondary);
+            color: var(--text-secondary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--text-secondary);
+            color: var(--primary);
+        }
+
+        .glitch {
+            position: relative;
+            animation: glitch 2s infinite;
+        }
+
+        @keyframes glitch {
+            0%, 90%, 100% {
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            }
+            95% {
+                text-shadow: 
+                    -2px 0 #ff0000,
+                    2px 0 #00ff00,
+                    0 0 10px rgba(255, 255, 255, 0.8);
+                transform: translate(-2px, 0);
+            }
+        }
+
+        /* Particles animation */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .particle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 50%;
+            animation: float 6s infinite linear;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-10px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .error-code {
+                font-size: 5rem;
+            }
+            
+            .error-title {
+                font-size: 1.8rem;
+            }
+            
+            .error-subtitle {
+                font-size: 1rem;
+            }
+            
+            .terminal {
+                margin: 30px 0;
+                padding: 20px;
+            }
+            
+            .actions {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 280px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="/" class="logo">IS</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="error-content">
+            <h1 class="error-code glitch">404</h1>
+            <h2 class="error-title">Page Not Found</h2>
+            <p class="error-subtitle">LOOKS LIKE YOU'VE VENTURED INTO UNCHARTED TERRITORY</p>
+           <!--  
+            <div class="terminal">
+                <div class="terminal-header">
+                    <span class="terminal-dot red"></span>
+                    <span class="terminal-dot yellow"></span>
+                    <span class="terminal-dot green"></span>
+                </div>
+                <div class="terminal-content">
+                    <p class="command-line"><b><i>[iftekhar]> </b></i>ls -la /requested-page</p>
+                    <p class="error-line">ls: cannot access '/requested-page': No such file or directory</p>
+                    <br>
+                    <p class="command-line"><b><i>[iftekhar]> </b></i>echo "Error: Resource not found"</p>
+                    <p>Error: Resource not found</p>
+                    <br>
+                    <p class="command-line"><b><i>[iftekhar]> </b></i>suggest_next_action</p>
+                    <p class="typing">The page you're looking for doesn't exist. Maybe it was moved, deleted, or you mistyped the URL<span class="cursor">_</span></p>
+                </div>
+            </div> -->
+
+            <div class="actions">
+                <a href="/" class="btn">← Return Home</a>
+                <a href="javascript:history.back()" class="btn btn-secondary">Go Back</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Create floating particles
+        const createParticles = () => {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 15;
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 6 + 's';
+                particle.style.animationDuration = (Math.random() * 4 + 4) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        };
+
+        // Enhanced typing effect
+        const typewriterText = document.querySelector('.typing');
+        const fullText = typewriterText.textContent;
+        typewriterText.textContent = '';
+        
+        let i = 0;
+        const typeSpeed = 50;
+        
+        const typeWriter = () => {
+            if (i < fullText.length) {
+                typewriterText.textContent += fullText.charAt(i);
+                i++;
+                setTimeout(typeWriter, typeSpeed);
+            } else {
+                // Remove cursor after typing is complete
+                setTimeout(() => {
+                    typewriterText.innerHTML = fullText;
+                }, 1000);
+            }
+        };
+
+        // Start animations after page load
+        window.addEventListener('load', () => {
+            createParticles();
+            setTimeout(typeWriter, 2000); // Start typing after terminal appears
+        });
+
+        // Add subtle hover effect to terminal
+        const terminal = document.querySelector('.terminal');
+        terminal.addEventListener('mouseenter', () => {
+            terminal.style.transform = 'translateY(-5px)';
+            terminal.style.boxShadow = '0 25px 80px rgba(255, 255, 255, 0.15)';
+        });
+
+        terminal.addEventListener('mouseleave', () => {
+            terminal.style.transform = 'translateY(0)';
+            terminal.style.boxShadow = '0 20px 60px rgba(255, 255, 255, 0.1)';
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'h' || e.key === 'H') {
+                window.location.href = '/';
+            } else if (e.key === 'Escape') {
+                history.back();
+            }
+        });
+
+        // Add subtle screen shake on 404 number hover
+        const errorCode = document.querySelector('.error-code');
+        errorCode.addEventListener('mouseenter', () => {
+            errorCode.style.animation = 'glitch 0.3s infinite';
+        });
+        
+        errorCode.addEventListener('mouseleave', () => {
+            errorCode.style.animation = 'glitch 2s infinite';
+        });
+    </script>
+</body>
+</html>
