@@ -5,7 +5,7 @@ categories: Software
 tags: [active-directory, ctf, windows, initial]
 ---
 LLMNR poisoning is a man-in-the-middle (MiTM) attack that exploits a Windows fallback protocol to steal user credentials. An attacker listens for Link-Local Multicast Name Resolution (LLMNR) requests on a network and responds to them, impersonating the legitimate network resource. This tricks the victim into sending their login information to the attacker's machine.
-
+ 
 ## What is LLMNR?
 LLMNR is an extremely outdated protocol that is used **to identify hosts when DNS fails to do so.** It was previously known as "`NBT-NS`".
 
