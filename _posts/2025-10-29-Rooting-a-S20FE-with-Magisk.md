@@ -12,7 +12,7 @@ We will be installing Magisk by sideloading it here.
 > I claim no responsibility for any data loss or bricking that occurs from following this walkthrough. This guide is for the S20FE running LineageOS, although it may work it is not tested and you continue at your own risk.
 {: .prompt-warning }
 
-### Rebooting into sideload using `adb`
+## Rebooting into sideload using `adb`
 
 Firstly, ensure that USB Debugging is enabled on your device. I am using an S20FE running LineageOS 23.
 Then, connect your device to your computer with a data USB cable. Unlock your phone, and you should get a prompt asking you to allow USB Debugging:
@@ -24,9 +24,13 @@ adb reboot sideload
 ```
 ![](/assets/images/rooting/sideload.jpeg)
 
+## Downloading the magisk `.apk`
+
 After this, we will now be in Lineage's recovery mode where we can install the Magisk `.zip`. Navigate to the [official Magisk Repo](https://github.com/topjohnwu/Magisk/releases/) and download an APK file for flashing
 ![](/assets/images/rooting/magisk.png)
 _(I used `v30.0`)_
+
+## Flashing the magisk `.apk` to our device
 
 Now, we can begin flashing. Before flashing, double-check that the device is in sideload mode:
 ```bash
