@@ -44,6 +44,7 @@ adb -d sideload Magisk-v30.0.apk
 ```
 
 We may get a notice with something such as `Signature Verification Failed`. This is expected, and we can just continue.
+
 ![](/assets/images/rooting/sig.png)
 
 ![](/assets/images/rooting/mag.png)
