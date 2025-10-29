@@ -7,9 +7,9 @@ tags: [rooting, android]
 Rooting is the process of gaining elevated privileges on a comparatively restricted device, such as a phone. In this walkthrough, we will run through the process of rooting a phone (S20FE 5G, `r8q`) running LineageOS 23 (Android 16).
 We will be installing Magisk by sideloading it here.
 
-> Please ensure you have a locked bootloader before continuing!
+> Please ensure you have an unlocked bootloader before continuing!
 {: .prompt-warning }
-> I claim no responsibility for any data loss or bricking that occurs from following this walkthrough. This guide is for the S20FE running LineageOS, although it may work it is not tested and you continue at your own risk.
+> I claim no responsibility for any data loss or bricking that occurs from following this walkthrough. This guide is for the S20FE running LineageOS, although it may work for other devices and software variants, it is not tested and you continue at your own risk. There is no universal magisk rooting guide.
 {: .prompt-warning }
 
 ## Rebooting into sideload using `adb`
