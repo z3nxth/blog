@@ -13,6 +13,7 @@ Sliver works across Windows, MacOS and Linux. This guide will be for the latter,
 
 ## Payload generation
 Firstly, we need to enter the sliver console. Depending on whether it is in your PATH or just a directory will vary this step. For example, I am using `better-sliver` (although these steps do apply to `sliver` as well.)
+![](/assets/images/sliver/generation.png)
 ```bash
 ❯ sudo ./sliver-server                                                     
 
@@ -49,8 +50,6 @@ There are multiple flags and options that are used here. Going through them:
 - `--arch amd64` specifies that we are using the `amd64` architecture. Sliver will try to compile any valid [Golang GOOS/GOARCH](https://gist.github.com/asukakenji/f15ba7e588ac42795f421b48b8aede63) combination.
 - `-s ~/sliver/payloads` tells Sliver to save the payload in a specified directory.
 - `-f elf` specifies the payload to be an ELF (Executable and Linkable) File.
-
-![](/assets/images/sliver/generation.png)
 
 We can now start our mTLS listener:
 ```bash
