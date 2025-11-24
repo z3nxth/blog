@@ -17,7 +17,6 @@ Sliver works across Windows, MacOS and Linux. This guide will be for the latter,
 
 ## Payload generation
 Firstly, we need to enter the sliver console. Depending on whether it is in your PATH or just a directory will vary this step. For example, I am using `better-sliver` (although these steps do apply to `sliver` as well.)
-![](/assets/images/sliver/generation.png)
 ```bash
 ❯ sudo ./sliver-server                                                     
 
