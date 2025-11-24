@@ -6,6 +6,9 @@ tags:
   - guide
   - red teaming
   - linux
+image:
+  path: /assets/img/sliver-linux-thumbnail.png
+  alt: "Thumbnail"
 ---
 
 Sliver is an "adversary emulation framework" or a powerful command and control (C2) framework designed "to provide advanced capabilities for covertly managing and controlling remote systems".
