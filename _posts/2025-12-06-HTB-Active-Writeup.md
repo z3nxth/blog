@@ -115,13 +115,10 @@ smbclient \\\\10.10.10.100\\Users -U SVC_TGS%GPPstillStandingStrong2k18
 ## Kerberoasting
 ### Brief theory
 Let's begin by understanding what "Kerberoasting" is.
-Kerberoasting is a post-compromise AD attack allowing a threat actor to **get a service account's hash.** It was first [presented in 2014 by Tim Medin.](https://www.redsiege.com/wp-content/uploads/2020/08/Kerberoastv4.pdf)
-
-Kerberoasting exploits the Kerberos protocol. In the aforementioned protocol, when a user is attempting to authenticate to a service they contact the Domain Controller (or Key Distribution Center) and tell it what service they are trying to connect to. 
-
-In response, the DC/KDC sends a ticket allowing access to the service. This ticket is encrypted. The ticket is encrypted with the hash of the account of the service.
-Therefore, an attacker can request a ticket and then decrypt it to find the key. Remember, the key is the hash of the service account. When the attacker has the hash of the account, they can now pass-the-hash, or crack it (we will shortly do the latter.)
-
+Kerberoasting is a post-compromise AD attack allowing a threat actor to **get a service account's hash.** It was first [presented in 2014 by Tim Medin.](https://www.redsiege.com/wp-content/uploads/2020/08/Kerberoastv4.pdf)<br>
+Kerberoasting exploits the Kerberos protocol. In the aforementioned protocol, when a user is attempting to authenticate to a service they contact the Domain Controller (or Key Distribution Center) and tell it what service they are trying to connect to. <br>
+In response, the DC/KDC sends a ticket allowing access to the service. This ticket is encrypted. The ticket is encrypted with the hash of the account of the service.<br>
+Therefore, an attacker can request a ticket and then decrypt it to find the key. Remember, the key is the hash of the service account. When the attacker has the hash of the account, they can now pass-the-hash, or crack it (we will shortly do the latter.)<br>
 With that all out of the way, let's get to it.
 ### The Kerberoasting Attack
 We're going to use [Impacket](https://github.com/fortra/impacket)'s `GetUserSPNs.py` for this:
