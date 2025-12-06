@@ -164,7 +164,7 @@ smbclient //10.10.10.100/C$ -U active.htb\\administrator%Ticketmaster1968
 ```
 , and the flag is located at `\users\administrator\desktop\root.txt` relative to `C$`.
 
-### Shell as `administrator`
+## Shell as `administrator`
 
 We can also get a shell with `psexec.py`:
 ```bash
