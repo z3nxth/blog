@@ -5,7 +5,6 @@ categories: Software
 tags: [ctf, linux, htb]
 ---
  
-## Box Synopsis
 Chemistry is an easy linux box that begins with us finding a website allowing us to upload `.cif` files. We gain RCE through file upload, giving us low privilege access as the `app` user. From there, we find a database with users and hashes. We find that one of the users who has a hash also owns a user on the machine. We SSH into the user, port forward an internal webpage that is susceptible to file inclusion. We get an SSH key for root and the box is compromised! 
 
 ## Enumeration
