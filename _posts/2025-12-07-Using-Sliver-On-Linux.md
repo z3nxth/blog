@@ -10,7 +10,7 @@ Sliver works across Windows, MacOS and Linux. This guide will be for the latter,
 > This guide is for linux hosts only.
 {: .prompt-info }
 
-_Please note that this guide does not use beacons, but to use a beacon simply generate your payload with a primary positional argument named `beacon` (ie `generate beacon --mtls ...`)
+_Please note that this guide does not use beacons, but to use a beacon simply generate your payload with a primary positional argument named `beacon` (ie `generate beacon --mtls ...`)_
 
 ## Payload generation
 Firstly, we need to enter the sliver console. Depending on whether it is in your PATH or just a directory will vary this step. For example, I am using `better-sliver` (although these steps do apply to `sliver` as well.)
