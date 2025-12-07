@@ -7,9 +7,6 @@ tags: [ctf, linux, sliver]
 Sliver is an "adversary emulation framework" or a powerful command and control (C2) framework designed "to provide advanced capabilities for covertly managing and controlling remote systems".
 Sliver works across Windows, MacOS and Linux. This guide will be for the latter, but I may update it later for the other two (although there are a surplus of tutorials for those.)
 
-> This guide is for linux hosts only.
-{: .prompt-info }
-
 _Please note that this guide does not use beacons, but to use a beacon simply generate your payload with a primary positional argument named `beacon` (ie `generate beacon --mtls ...`)_
 
 ## Payload generation
