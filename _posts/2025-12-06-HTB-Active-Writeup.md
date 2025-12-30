@@ -6,7 +6,7 @@ tags: [ctf, windows, htb, active-directory]
 ---
 
 Active is an easy windows box that begins with an open SMB share that contains an interesting file (namely "`Groups.xml`") with config data for a Group Policy Preference. This data is encrypted with a key that Microsoft officially released. With a user account, we can now Kerberoast the `SVC_TGS` account to get Administrator credentials, and thus successfully compromise the box!
-
+ 
 ## Enumeration
 ### `nmap`
 We begin with an `nmap` scan showing us a few ports (including SMB):
