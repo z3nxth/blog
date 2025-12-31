@@ -4,7 +4,6 @@ date: 2025-12-07
 categories: Software
 tags: [ctf, windows, sliver]
 ---
-A stager is a piece of software that triggers a larger payload's download and execution. It will usually call back to a Command and Control server (C2) to download the full program that will be executed on the target.
 
 A stager is a small piece of software that has only one primary task: to trigger a larger implant's download and make the initial connection between host and C2. Stagers are small, lightweight and can help in AV evasion where they can potentially run in-memory.
 
