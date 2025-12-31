@@ -1,6 +1,6 @@
 ---
-title: "Using stagers with Sliver"
-date: 2025-12-07
+title: "Using Stagers with Sliver"
+date: 2025-12-31
 categories: Software
 tags: [ctf, windows, sliver]
 ---
