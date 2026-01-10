@@ -1,6 +1,6 @@
 ---
 title: "Understanding SMB Relay Attacks"
-date: 2025-10-02
+date: 2026-1-10
 categories: Software
 tags: [active-directory, windows, lateral-movement, ctf]
 ---
