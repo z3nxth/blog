@@ -9,7 +9,7 @@ SMB relay is a **man-in-the-middle** attack used in AD environments in the cas
 This attack is most commonly chained **after LLMNR / NBT-NS poisoning**, but any forced NTLM authentication can be relayed *if conditions are met*.
 
 ## Explanation
-
+ 
 SMB relay abuses NTLM authentication by forwarding a victim’s login attempt to another machine. For an SMB relay attack to be successful, SMB signing **must be disabled or not enforced on the target.** This is default behaviour on machines, but enabled on servers by default. 
 In addition, NTLM authentication must be allowed, and for any real value SMB credentials should be at least for the Local Admin.
 ### How the attack works
