@@ -4,7 +4,7 @@ date: 2025-10-02
 categories: Software
 tags: [active-directory, windows, lateral-movement, ctf]
 ---
-SMB relay is a **man-in-the-middle (MiTM)** attack used in AD environments in the case that we as an attacker (for whatever reason) can't crack a hash we have. Instead of wasting valuable time cracking the password, trust is abused by relaying authentication to another machine which potentially may grant us access.
+SMB relay is a **man-in-the-middle** attack used in AD environments in the case that we as an attacker (for whatever reason) can't crack a hash we have. Instead of wasting valuable time cracking the password, trust is abused by relaying authentication to another machine which potentially may grant us access.
 
 This attack is most commonly chained **after LLMNR / NBT-NS poisoning**, but any forced NTLM authentication can be relayed *if conditions are met*.
 
