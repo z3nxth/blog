@@ -30,7 +30,7 @@ The logic gate looks like this:
 
 ![XOR Gate in Digital Electronics](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.0zgtRzzTX3HwTwyXNwCh4AHaBR%3Fpid%3DApi&f=1&ipt=9e2ce6b76ffb657f3c6969779469629a7e8c177134757cd01c31b21bd4106c83&ipo=images)
 
-_(credit to [Electrical Vani](https://electricalvani.com/xor-gate-and-xnor-gate))
+_(credit to [Electrical Vani](https://electricalvani.com/xor-gate-and-xnor-gate))_
 
 Now, let's go through an example operation.
 
@@ -46,14 +46,16 @@ We can XOR the two together bitwise:
 
 | Plaintext (char 's')     | 0     | 1     | 1     | 1     | 0     | 0     | 1     | 1     |
 | Key (character 'o')      | 0     | 1     | 1     | 0     | 1     | 1     | 1     | 1     |
+| ------------------------ | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
 | **Result (plain ^ key)** | **0** | **0** | **0** | **1** | **1** | **1** | **0** | **0** |
 
 Our XORed result is therefore binary `0001 1100`.
 Let's try reversing to find the plain with only the key and the result now:
 
-| Key (character 'o')  | 0   | 1   | 1   | 0   | 1   | 1   | 1   | 1   |
-| Cipher (plain ^ key) | 0   | 0   | 0   | 1   | 1   | 1   | 0   | 0   |
-| Plaintext (char 's') | 0   | 1   | 1   | 1   | 0   | 0   | 1   | 1   |
+| Key (character 'o')      | 0     | 1     | 1     | 0     | 1     | 1     | 1     | 1     |
+| Cipher (plain ^ key)     | 0     | 0     | 0     | 1     | 1     | 1     | 0     | 0     |
+| ------------------------ | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+| **Plaintext (char 's')** | **0** | **1** | **1** | **1** | **0** | **0** | **1** | **1** |
 
 Hopefully, by now you shall be able to understand how XORing works. As we can see, if we have the key we can perform the same XOR operation unto our ciphertext to gain the plaintext.
 
@@ -67,8 +69,8 @@ The value of bits are lost when we use (N)AND/(N)OR and others.
 For example, trying to AND operation chars 's' and 'o':
 
 | Plaintext (char 's')     | 0     | 1     | 1     | 1     | 0     | 0     | 1     | 1     |
-| ------------------------ | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
 | Key (character 'o')      | 0     | 1     | 1     | 0     | 1     | 1     | 1     | 1     |
+| ------------------------ | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
 | **Result (plain & key)** | **0** | **1** | **1** | **0** | **0** | **0** | **1** | **1** |
 
 This is useless and we lose bits.
