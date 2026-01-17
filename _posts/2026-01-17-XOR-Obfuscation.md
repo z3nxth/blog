@@ -8,7 +8,7 @@ XOR obfuscation is a bare-bones and lightweight way of obfuscating data (usually
 
 Interestingly, XORing is an **involutory** operation. An involution is an operation that is its own inverse, so if applied twice the original value is returned. Therefore, in an XOR operation:
 
-```plain
+```plaintext
 data ^ key ^ key = data
 ```
 _Note the `^` symbol used to denote the XOR operation. In a mathematical scenario, symbol "⊕" is used (`U+2295`)._
@@ -25,9 +25,11 @@ The truth table for an XOR operation is below:
 | 0   | 1   | 1     |
 | 1   | 0   | 1     |
 | 1   | 1   | 0     |
+
 The logic gate looks like this:
 
 ![XOR Gate in Digital Electronics](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.0zgtRzzTX3HwTwyXNwCh4AHaBR%3Fpid%3DApi&f=1&ipt=9e2ce6b76ffb657f3c6969779469629a7e8c177134757cd01c31b21bd4106c83&ipo=images)
+
 _(credit to [Electrical Vani](https://electricalvani.com/xor-gate-and-xnor-gate))
 
 Now, let's go through an example operation.
@@ -43,7 +45,6 @@ We can XOR the two together bitwise:
 
 
 | Plaintext (char 's')     | 0     | 1     | 1     | 1     | 0     | 0     | 1     | 1     |
-| ------------------------ | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
 | Key (character 'o')      | 0     | 1     | 1     | 0     | 1     | 1     | 1     | 1     |
 | **Result (plain ^ key)** | **0** | **0** | **0** | **1** | **1** | **1** | **0** | **0** |
 
@@ -51,7 +52,6 @@ Our XORed result is therefore binary `0001 1100`.
 Let's try reversing to find the plain with only the key and the result now:
 
 | Key (character 'o')  | 0   | 1   | 1   | 0   | 1   | 1   | 1   | 1   |
-| -------------------- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Cipher (plain ^ key) | 0   | 0   | 0   | 1   | 1   | 1   | 0   | 0   |
 | Plaintext (char 's') | 0   | 1   | 1   | 1   | 0   | 0   | 1   | 1   |
 
