@@ -1,5 +1,5 @@
 ---
-title: Real World XOR: Cloudflare Email Protection
+title: Real World XOR (Cloudflare Email Protection)
 date: 2026-03-01
 categories: Software
 tags:
