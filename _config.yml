@@ -16,10 +16,10 @@ timezone: Europe/London
 
 title: z3nxth # the main title
 
-tagline: Writeups, blogposts, guides and more # it will display as the subtitle
+tagline: Site collating CTF writeups, pentest notes/cheatsheets as well as logic and other disciplines # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
-  Writeups, blogposts, guides and more
+  Site collating CTF writeups, pentest notes/cheatsheets as well as logic and other disciplines
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
