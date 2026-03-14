@@ -84,7 +84,7 @@ where:
 Here, instead of applying proof rules, we consider all models in which the premises could possibly be true. If in every model the conclusion must also be true, the conclusion is a semantic consequence of the premises.
 
 ##### Example
-
+ 
 Consider the same premises:
 
 1.
