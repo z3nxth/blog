@@ -37,7 +37,7 @@ where:
 
 We don't concern ourselves with if Γ or φ are true in the real world. We only followed formal *proof* rules.
 
-##### Example
+##### Example 
 
 Γ:
 
